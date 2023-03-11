@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "../../variables" as v;
+@use "../../generals" as g;
+
+.main-header {
+    @include v.view(pad) {
+        justify-content: center;
+    }
+    font-size: Min(16px, Max(14px, 16/768*100vw));
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 32/16*1em;
+    padding-inline-start: 29/16*1em;
+    padding-inline-end: 54/16*1em;
+    .desktop-nav {
+        @include v.view(pad) {
+            display: none;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40/16*1em;
+            li {
+                list-style: none;
+                font-size: 15/16*1em;
+                color: v.$mainText;
+            }
+        }
+    }
+}

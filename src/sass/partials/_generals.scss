@@ -1,0 +1,22 @@
+@use './variables' as v;
+
+p {
+    font-size: Min(16px, Max(14px, 16/768*100vw));
+}
+
+.main-button {
+    font-size: Min(16px, Max(14px, 16/768*100vw));
+    font-size: 24/16*1em;
+    font-family: v.$altfont;
+    color: v.$mainText;
+    text-transform: uppercase;
+    padding: 6/18*1em 92/18*1em;
+    background-color: v.$green;
+    margin-inline: auto;
+    max-width: 375px;
+}
+
+.red-text {
+    color: v.$red;
+    text-decoration: none !important;
+}

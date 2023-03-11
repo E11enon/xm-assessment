@@ -1,0 +1,85 @@
+// Colors
+$green: #29A643;
+$varGreen: #3C763D;
+$lightGreen: #B1FFC2;
+$veryLightGreen: #F3FEF4;
+$red: #D51820;
+$bgCol: #0B0819;
+$altBlack: #252525;
+$altTitle: #444444;
+$altText: #888888;
+$mainText: #fff;
+$coinBg: #FFF8D6;
+
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+$mainfont: 'Roboto', sans-serif;
+$altfont: 'Bebas Neue', cursive;
+
+
+// Font Awesome mixins
+
+// free icons
+@mixin fa{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+// brands icons
+@mixin fab{
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 900;
+}
+
+
+// breaking points
+
+@mixin view($media) {
+    @if $media == xs {
+      @media only screen and (max-width: 580px) {
+         @content;
+       }
+      } @else if $media == sm {
+        @media only screen and (max-width: 767px) {
+           @content;
+         }
+       } @else if $media == pad {
+        @media only screen and (max-width: 768px) {
+           @content;
+         }
+       } @else if $media == padlan {
+        @media only screen and (max-width: 1024px) and (orientation: landscape) {
+           @content;
+         }
+       } @else if $media == md-up {
+        @media only screen and (min-width: 768px) {
+           @content;
+         }
+       } @else if $media == md {
+       @media only screen and (max-width: 991px) {
+          @content;
+        }
+      } @else if $media == lg {
+       @media only screen and (max-width: 1199px) {
+          @content;
+        }
+      } @else if $media == lg-up {
+        @media only screen and (min-width: 992px) {
+           @content;
+         }
+       } @else if $media == xl {
+        @media only screen and (min-width: 1200px) {
+           @content;
+         }
+       } @else if $media == xxl {
+        @media only screen and (max-width: 1640px) {
+           @content;
+         }
+       } @else if $media == xxs {
+        @media only screen and (max-width: 420px) {
+           @content;
+         }
+       }
+  }
